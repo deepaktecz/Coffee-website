@@ -33,7 +33,11 @@ You can reuse and customize this project to build your own coffee shop landing p
 
 ## 📷 Preview
 
-*(Optional: Add screenshots here for desktop + mobile views)*
+![1](coffee-web1.png)
+
+![2](coffee-web2.png)
+
+![3](coffee-web3.png)
 
 ---
 
