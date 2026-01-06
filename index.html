@@ -3,46 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>coffee</title>
+    <title>BrewHaven Coffee</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="container header-container">
-          <a href="#" class="logo" >
+          <a href="#" class="logo">
             <i class="fa-solid fa-mug-hot logo-icon"></i>
             <div class="logo-text">Brew<span>Haven</span></div>
           </a>
           
-          <nav>
+          <div class="hamburger">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+
+          <nav class="nav-menu">
             <ul>
                 <li><a href="#hero">Home</a></li>
-                <li><a href="#products">products</a></li>
+                <li><a href="#products">Products</a></li>
                 <li><a href="#locations">Locations</a></li>
                 <li><a href="#contacts">Contacts</a></li>
             </ul>
+            <div class="nav-buttons mobile-only">
+                <a href="#" class="btn btn-secondary">Sign In</a>
+                <a href="#" class="btn btn-primary">Order online</a>
+            </div>
           </nav>
 
-          <div class="nav-buttons">
+          <div class="nav-buttons desktop-only">
             <a href="#" class="btn btn-secondary">Sign In</a>
             <a href="#" class="btn btn-primary">Order online</a>
-
           </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-     <section class="hero">
-      <div class="container">
+    <section class="hero" id="hero">
+      <div class="container hero-container">
         <div class="hero-content">
           <div class="hero-subtitle">
             <i class="fa-solid fa-seedling"></i>Ethically Sourced Beans
           </div>
-          <h1 class="hero-title">Artisan coffee <br><span>Crafted with passion</span></h1>
+          <h1 class="hero-title">Artisan Coffee <br><span>Crafted with Passion</span></h1>
           <p class="hero-text">Discover single-origin coffees roasted to 
             perfection in small batches for exceptional flavor.
             Experience the journey from bean to cup with our master roasters.
@@ -51,107 +57,116 @@
             <a href="#" class="btn btn-secondary">Visit Our Cafe</a>
           </div>
         </div>
-        <img src="coffee1.jpeg" alt="" width="370px">
+        <div class="hero-image">
+            <img src="coffee1.jpeg" alt="Coffee Cup">
+        </div>
       </div>
      </section>
 
-     <!-- products section -->
-      <section class="products" id="products">
+     <section class="products" id="products">
         <div class="container">
           <div class="section-header">
             <div class="section-subtitle">Our Selection</div>
-            <h2 class="section-subtitle">Signature coffee Blends</h2>
+            <h2 class="section-title">Signature Coffee Blends</h2>
             <p class="section-desc">Each batch is carefully roasted
               to highlight the unique characteristics of the beans.</p>
           </div>
-           
+            
           <div class="product-grid">
-          <div class="product-card">
-            <img src="coffee2.jpeg" alt="">
+            
+            <div class="product-item">
+                <div class="product-card">
+                    <img src="coffee2.jpeg" alt="Ethiopian Coffee">
+                </div>
+                <div class="product-info">
+                    <div class="product-tag">BESTSELLER</div>
+                    <h3 class="product-title">Ethiopian Yirgacheffe</h3>
+                    <p class="product-desc">Floral notes with bright citrus acidity and a tea-like body. Light roast.</p>
+                    <div class="product-footer">
+                        <div class="product-price">$18.99</div>
+                        <div class="product-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-item">
+                <div class="product-card">
+                    <img src="coffee2.jpeg" alt="Colombian Coffee">
+                </div>
+                <div class="product-info">
+                    <div class="product-tag">BESTSELLER</div>
+                    <h3 class="product-title">Colombian Supremo</h3>
+                    <p class="product-desc">Rich caramel sweetness with nutty undertones. Medium roast.</p>
+                    <div class="product-footer">
+                        <div class="product-price">$16.99</div>
+                        <div class="product-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-item">
+                <div class="product-card">
+                    <img src="coffee2.jpeg" alt="Espresso">
+                </div>
+                <div class="product-info">
+                    <div class="product-tag">NEW</div>
+                    <h3 class="product-title">Dark Roast Espresso</h3>
+                    <p class="product-desc">Bold and intense with dark chocolate notes. Dark roast.</p>
+                    <div class="product-footer">
+                        <div class="product-price">$17.99</div>
+                        <div class="product-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+             <div class="product-item">
+                <div class="product-card">
+                    <img src="coffee2.jpeg" alt="House Blend">
+                </div>
+                <div class="product-info">
+                    <div class="product-tag">CLASSIC</div>
+                    <h3 class="product-title">House Blend</h3>
+                    <p class="product-desc">Smooth and balanced, perfect for your morning cup.</p>
+                    <div class="product-footer">
+                        <div class="product-price">$15.99</div>
+                        <div class="product-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
           </div>
-          <div class="product-info">
-        <div class="product-tag">BESTSELLER</div>
-         <h3 class="product-title">Ethiopian Yirgacheffe</h3>
-         <p class="product-desc">Floral notes with bright citrus acidity and a tea-like body. Light roast.</p>
-
-        <div class="product-footer">
-         <div class="product-price">$18.99</div>
-          <div class="product-rating">
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star-half-stroke"></i>
-      </div>
-    </div>
-  </div>
-
-  <div class="product-card">
-    <img src="coffee2.jpeg" alt="">
-  </div>
-  <div class="product-info">
-    <div class="product-tag">BESTSELLER</div>
-    <h3 class="product-title">Colombian Supremo</h3>
-    <p class="product-desc">Rich caramel sweetness with nutty undertones. Medium roast.</p>
-
-    <div class="product-footer">
-      <div class="product-price">$16.99</div>
-      <div class="product-rating">
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-      </div>
-    </div>
-  </div>
-
-  <div class="product-card">
-    <img src="coffee2.jpeg" alt="">
-  </div>
-  <div class="product-info">
-    <div class="product-tag">BESTSELLER</div>
-    <h3 class="product-title">Colombian Supremo</h3>
-    <p class="product-desc">Rich caramel sweetness with nutty undertones. Medium roast.</p>
-
-    <div class="product-footer">
-      <div class="product-price">$16.99</div>
-      <div class="product-rating">
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-      </div>
-    </div>
-  </div>
-
-  <div class="product-card">
-    <img src="coffee2.jpeg" alt="">
-  </div>
-  <div class="product-info">
-    <div class="product-tag">NEW</div>
-    <h3 class="product-title">Dark Roast Espresso</h3>
-    <p class="product-desc">
-      Bold and intense with dark chocolate notes. Dark roast.
-    </p>
-    <div class="product-footer">
-      <div class="product-price">$17.99</div>
-      <div class="product-rating">
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-         </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-      <!-- Footer -->
-       <footer>
+      <footer id="contacts">
         <div class="footer-content">
           <div class="footer-column1">
             <h3>About BrewHaven</h3>
-            <p class="footer-text">Artisan coffee roasters dedicated to quality,sustainability, and the perfect cup.</p>
+            <p class="footer-text">Artisan coffee roasters dedicated to quality, sustainability, and the perfect cup.</p>
           </div>
 
           <div class="footer-column3">
@@ -169,7 +184,7 @@
             <ul class="footer-links">
               <li><a href="#">Coffee Blends</a></li>
               <li><a href="#">Brewing Guides</a></li>
-              <li><a href="#">sustainability</a></li>
+              <li><a href="#">Sustainability</a></li>
               <li><a href="#">Wholesale</a></li>
             </ul>
           </div>
@@ -186,8 +201,8 @@
         </div>
 
         <div class="copyright">
-          &copy; 2025 BrewHaven coffee Roasters. All rights reserved.</div>
+          &copy; 2025 BrewHaven Coffee Roasters. All rights reserved.</div>
       </footer>
-     <script src="script.js"></script>
+      <script src="script.js"></script>
 </body>
 </html>
