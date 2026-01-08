@@ -24,7 +24,7 @@ body {
 }
 
 .container {
-    width: 90%; /* Changed from 100% to 90% for mobile spacing */
+    width: 90%;
     max-width: 1350px;
     margin: 0 auto;
 }
@@ -45,7 +45,7 @@ header {
     justify-content: space-between;
     align-items: center;
 }
-
+/* Logo */
 .logo {
     display: flex;
     align-items: center;
@@ -85,6 +85,7 @@ nav a {
     position: relative;
     padding: 5px 0;
     transition: all 0.3s ease;
+    white-space: nowrap;
 }
 
 nav a::after {
@@ -107,7 +108,7 @@ nav a:hover::after {
     gap: 15px;
 }
 
-/* Hamburger Menu (Hidden on Desktop) */
+/* Hamburger Menu (Hidden on Desktop and visible on Mobile) */
 .hamburger {
     display: none;
     cursor: pointer;
@@ -179,12 +180,12 @@ nav a:hover::after {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap; /* Allows stacking */
+    flex-wrap: wrap;
 }
 
 .hero-content {
     flex: 1;
-    min-width: 300px; /* Prevents squishing */
+    min-width: 300px;
     color: var(--text-light);
     animation: fadeInUp 1s ease-out;
 }
@@ -272,10 +273,10 @@ nav a:hover::after {
     color: var(--text-light);
 }
 
-/* Product Grid - Fixed Structure */
+/* Product Grid */
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Auto Responsive */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
     margin-top: 50px;
 }
@@ -314,7 +315,7 @@ nav a:hover::after {
     background: #231712;
     padding: 20px;
     color: #fff;
-    flex-grow: 1; /* Ensures equal height */
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
 }
@@ -430,25 +431,126 @@ footer {
 }
 
 
-/* =========================================
-   MEDIA QUERIES (Mobile Responsiveness)
-   ========================================= */
-
-@media screen and (max-width: 992px) {
-    .hero-title {
-        font-size: 48px;
+/* Media Queries */
+@media screen and (max-width: 1100px) {
+    nav ul {
+        gap: 18px;
     }
     
-    .hero-image img {
-        width: 300px;
+    nav a {
+        font-size: 14px;
+    }
+    
+    .btn {
+        font-size: 13px;
+        padding: 5px 14px;
+    }
+    
+    .logo-text {
+        font-size: 20px;
+    }
+    
+    .logo-icon {
+        font-size: 24px;
+    }
+    
+    .hero-title {
+        font-size: 50px;
+    }
+    
+    .hero-subtitle {
+        font-size: 18px;
+    }
+    
+    .hero-text {
+        font-size: 15px;
+    }
+    
+    .section-title {
+        font-size: 38px;
+    }
+    
+    .section-subtitle {
+        font-size: 16px;
+    }
+    
+    .section-desc {
+        font-size: 16px;
     }
 }
 
-@media screen and (max-width: 768px) {
-    /* 1. Hamburger Menu Logic */
+@media screen and (max-width: 992px) {
+    .hero-title {
+        font-size: 42px;
+    }
+    
+    .hero-subtitle {
+        font-size: 17px;
+    }
+    
+    .hero-text {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+    
+    .hero-image img {
+        width: 280px;
+    }
+    
+    nav ul {
+        gap: 15px;
+    }
+    
+    nav a {
+        font-size: 13px;
+    }
+    
+    .btn {
+        font-size: 12px;
+        padding: 5px 12px;
+    }
+    
+    .logo-text {
+        font-size: 19px;
+    }
+    
+    .logo-icon {
+        font-size: 22px;
+    }
+    
+    .section-title {
+        font-size: 34px;
+    }
+    
+    .section-subtitle {
+        font-size: 15px;
+    }
+    
+    .section-desc {
+        font-size: 15px;
+    }
+    
+    .product-title {
+        font-size: 20px;
+    }
+    
+    .product-desc {
+        font-size: 13px;
+    }
+    
+    .product-price {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 900px) {
     .hamburger {
         display: block;
         z-index: 1001;
+    }
+    
+    nav ul {
+        display: none;
     }
 
     .nav-menu {
@@ -457,7 +559,7 @@ footer {
         top: 0;
         gap: 0;
         flex-direction: column;
-        background-color: rgba(22, 21, 21, 0.98); /* Almost opaque dark bg */
+        background-color: rgba(22, 21, 21, 0.98);
         width: 100%;
         height: 100vh;
         text-align: center;
@@ -468,6 +570,10 @@ footer {
 
     .nav-menu.active {
         left: 0;
+    }
+    
+    .nav-menu.active ul {
+        display: flex;
     }
 
     .nav-menu ul {
@@ -490,21 +596,29 @@ footer {
         margin-top: 30px;
         gap: 20px;
     }
+}
 
+@media screen and (max-width: 768px) {
     /* 2. Hero Section Mobile */
     .hero-container {
-        flex-direction: column-reverse; /* Text on top of image usually, or keep normal */
+        flex-direction: column-reverse;
         text-align: center;
-        padding-top: 40px;
+        padding-top: 30px;
     }
 
     .hero-content {
         width: 100%;
-        margin-top: 30px;
+        margin-top: 20px;
     }
 
     .hero-subtitle {
         justify-content: center;
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+    
+    .hero-subtitle::before {
+        width: 30px;
     }
 
     .hero-buttons {
@@ -512,41 +626,133 @@ footer {
     }
     
     .hero-title {
-        font-size: 36px;
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+    
+    .hero-text {
+        font-size: 13px;
+        margin-bottom: 25px;
     }
     
     .hero-image img {
-        margin: 0; /* Remove old margin */
-        width: 80%;
-        max-width: 350px;
+        margin: 0;
+        width: 70%;
+        max-width: 250px;
+    }
+    
+    .btn {
+        font-size: 12px;
+        padding: 6px 16px;
     }
 
     /* 3. Products Mobile */
+    .products {
+        padding-top: 40px;
+        padding-bottom: 60px;
+    }
+    
+    .section-header {
+        margin-bottom: 30px;
+    }
+    
+    .section-subtitle {
+        font-size: 13px;
+        margin-bottom: 8px;
+    }
+    
     .section-title {
-        font-size: 32px;
+        font-size: 26px;
+        margin-bottom: 15px;
+    }
+    
+    .section-desc {
+        font-size: 13px;
     }
     
     .product-grid {
-        grid-template-columns: 1fr; /* Stack vertically 1 by 1 */
+        grid-template-columns: 1fr;
         padding: 0 20px;
+        gap: 20px;
+    }
+    
+    .product-card {
+        height: 180px;
+    }
+    
+    .product-info {
+        padding: 15px;
+    }
+    
+    .product-tag {
+        font-size: 9px;
+        padding: 3px 8px;
+        margin-bottom: 8px;
+    }
+    
+    .product-title {
+        font-size: 18px;
+        margin-bottom: 6px;
+    }
+    
+    .product-desc {
+        font-size: 12px;
+        margin-bottom: 12px;
+        line-height: 1.5;
+    }
+    
+    .product-footer {
+        padding-top: 12px;
+    }
+    
+    .product-price {
+        font-size: 17px;
+    }
+    
+    .product-rating i {
+        font-size: 12px;
     }
 
     /* 4. Footer Mobile */
     .footer-content {
-        grid-template-columns: 1fr; /* Stack footer columns */
+        grid-template-columns: 1fr;
         text-align: center;
+        gap: 30px;
+        margin-bottom: 30px;
+    }
+
+    .footer-content h3 {
+        font-size: 18px;
+        margin-bottom: 15px;
+        padding-bottom: 8px;
     }
 
     .footer-content h3::after {
         left: 50%;
         transform: translateX(-50%);
+        width: 40px;
     }
 
     .footer-links a, .address-links li {
         justify-content: center;
+        font-size: 13px;
+        margin-bottom: 8px;
+    }
+    
+    .footer-text {
+        font-size: 13px;
     }
     
     .footer-column1 p {
         width: 100%;
+    }
+    
+    .copyright {
+        font-size: 12px;
+        padding-top: 20px;
+    }
+    
+    footer {
+        padding: 50px 0 20px;
     }
 }
