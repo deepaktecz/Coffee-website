@@ -70,6 +70,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    transition:
+        background-color var(--transition-speed) ease,
+        color var(--transition-speed) ease,
+        border-color var(--transition-speed) ease;
 }
 
 body {
@@ -78,6 +83,8 @@ body {
     color: var(--text-main);
     line-height: 1.7;
     overflow-x: hidden;
+
+    
 }
 
 .container {
@@ -232,6 +239,8 @@ nav a:hover::after {
     height: 100%;
     background: var(--bg-hero);
     z-index: -1;
+    transition: opacity var(--transition-speed) ease;
+
 }
 
 .hero-container {
@@ -489,6 +498,7 @@ footer {
     color: var(--coffee-accent);
     font-size: 14px;
 }
+
 
 
 /* Media Queries */
