@@ -1,5 +1,7 @@
 :root {
     --coffee-dark: #3e2723;
+    --coffee-name: #6D523B;
+    --coffee-text: #F1E4C8;
     --coffee-medium: #6F4E37;
     --coffee-light: #C4A484;
     --coffee-accent: #D2B48C;
@@ -37,6 +39,10 @@
     --bg-card: #120b08;
     --bg-card-inner: #231712;
     --bg-footer: #0B0705;
+
+    --coffee-text:var(--text-light);
+    --coffee-name:var(--coffee-cream);
+    --coffee-dark: #0b070528;
 
     --text-main: var(--text-light);
     --text-hero: var(--text-light);
@@ -211,13 +217,15 @@ nav a:hover::after {
 
 .btn-secondary {
     background: transparent;
-    color: var(--coffee-medium);
-    border: 2px solid var(--coffee-medium);
+    color: #D4AF37;
+    border: 2px solid #D4AF37;
 }
 
 .btn-secondary:hover {
-    background: rgba(111, 78, 55, 0.05);
-    transform: translateY(-3px);
+    background: #D4AF37;
+    color: #3A2A25;
+    transition: all 0.3s ease;
+    transform: scale(1.05);
 }
 
 /* Hero Section */
@@ -302,7 +310,7 @@ nav a:hover::after {
     font-size: 16px;
     margin-bottom: 40px;
     max-width: 600px;
-    color: var(--text-desc);
+    color: var(--coffee-text);
 }
 
 /* Products Section */
@@ -402,7 +410,7 @@ nav a:hover::after {
     font-family: "Playfair Display", serif;
     font-size: 22px;
     margin-bottom: 8px;
-    color: var(--coffee-cream);
+    color: var(--coffee-name);
 }
 
 .product-desc {
@@ -447,6 +455,10 @@ footer {
     width: 90%;
     max-width: 1350px;
     margin: 0 auto 50px;
+}
+
+.footer-text {
+    color: var(--coffee-accent);
 }
 
 .footer-content h3 {
