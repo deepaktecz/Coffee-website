@@ -43,4 +43,4 @@ You can reuse and customize this project to build your own coffee shop landing p
 
 ## 📝 License
 
-This project is open-source and available for anyone to use and modify.
+This project is open-source and available for anyone to use and modify..
