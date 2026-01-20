@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="no-transition">
   <header>
     <div class="container header-container">
       <a href="#" class="logo">
@@ -33,13 +33,13 @@
           <li><a href="#locations">Locations</a></li>
           <li><a href="#contacts">Contacts</a></li>
         </ul>
+        <!-- REMOVE THIS ENTIRE mobile-only DIV - buttons should only be in desktop nav -->
+        <!-- 
         <div class="nav-buttons mobile-only">
-          <button class="theme-toggle" aria-label="Toggle Dark Mode">
-            <i class="fa-solid fa-moon"></i>
-          </button>
           <a href="#" class="btn btn-secondary">Sign In</a>
           <a href="#" class="btn btn-primary">Order online</a>
         </div>
+        -->
       </nav>
 
       <div class="nav-buttons desktop-only">
