@@ -795,7 +795,7 @@ footer::before {
     text-align: center;
     padding-top: 30px;
     border-top: 1px solid var(--border-color);
-    color: var(--coffee-accent);
+    color: white;
     font-size: 14px;
     letter-spacing: 1px;
 }
@@ -1064,4 +1064,5 @@ footer::before {
         animation: none !important;
         transform: perspective(1000px) rotateY(0deg) scale(1.02);
     }
+
 }
