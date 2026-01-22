@@ -378,8 +378,7 @@ nav a:hover::after {
     display: flex;
     align-items: center;
     position: relative;
-    padding: 120px 20px 50px;
-    margin-top: 80px;
+    padding: 100px 20px 50px;
 }
 
 .hero::before {
@@ -467,8 +466,7 @@ nav a:hover::after {
 
 /* Fix hero text alignment */
 .hero-title {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(32px, 5vw, 58px);
+    font-size: clamp(24px, 5vw, 58px);
     line-height: 1.1;
     margin-bottom: 25px;
     letter-spacing: 0.5px;
@@ -561,7 +559,6 @@ nav a:hover::after {
 }
 
 .section-title {
-    font-family: 'Playfair Display', serif;
     font-size: 42px;
     color: var(--coffee-medium);
     margin-bottom: 20px;
@@ -781,7 +778,6 @@ footer::before {
     display: flex;
     align-items: center;
     gap: 12px;
-    padding: 5px 0;
     position: relative;
 }
 
