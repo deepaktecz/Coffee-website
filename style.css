@@ -1,4 +1,5 @@
 :root {
+    --text-light: #F3F3F3;
     --coffee-dark: #3e2723;
     --coffee-name: #6D523B;
     --coffee-text: #F1E4C8;
@@ -6,10 +7,9 @@
     --coffee-light: #C4A484;
     --coffee-accent: #D2B48C;
     --coffee-cream: #F5F5DC;
-    --coffee-gold: #D4AF37;
+    --coffee-gold: #cc6520;
     --text-dark: #2C2416;
-    --text-light: #F3F3F3;
-
+    
     /* Semantic Theme Variables (Default: Light Mode) */
     --bg-body: var(--coffee-cream);
     --bg-header: #ffffff;
@@ -118,7 +118,10 @@ footer,
 .product-item,
 .product-info,
 .product-card {
-    composes: theme-transition;
+    transition-property: background-color, background, color, border-color, box-shadow, fill, stroke;
+    transition-duration: var(--transition-speed);
+    transition-timing-function: var(--transition-timing);
+    will-change: background-color, color, border-color;
 }
 
 /* Text elements */
@@ -128,8 +131,9 @@ h1, h2, h3, h4, h5, h6, p, span, a, li,
 .product-title, .product-desc, .product-price,
 .footer-text, .copyright, .btn,
 nav a, .footer-links a {
-    composes: theme-transition;
     transition-property: color, background-color, border-color;
+    transition-duration: var(--transition-speed);
+    transition-timing-function: var(--transition-timing);
 }
 
 /* Interactive elements */
@@ -137,8 +141,9 @@ nav a, .footer-links a {
 .theme-toggle,
 .product-item,
 nav a {
-    composes: theme-transition;
     transition-property: all;
+    transition-duration: var(--transition-speed);
+    transition-timing-function: var(--transition-timing);
     position: relative;
     overflow: hidden;
 }
