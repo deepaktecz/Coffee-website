@@ -32,7 +32,7 @@
     --slow-transition: 0.6s;
 }
 
-[data-theme="dark"] {
+.dark-mode {
     /* Classy dark mode with warm tones */
     --bg-body: #0f0a08;
     --bg-header: #1a120e;
@@ -61,6 +61,7 @@
     --border-color: rgba(212, 184, 150, 0.15);
     --shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(212, 184, 150, 0.05);
 }
+
 
 /* === CRITICAL LAYOUT FIXES === */
 * {
