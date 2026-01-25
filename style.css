@@ -352,7 +352,7 @@ nav a:hover::after {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--coffee-medium), var(--coffee-dark));
+    background: #aa4909;
     color: white;
     box-shadow: 0 4px 15px rgba(111, 78, 55, 0.3);
 }
