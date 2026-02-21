@@ -14,7 +14,7 @@
     --bg-body: var(--coffee-cream);
     --bg-header: #ffffff;
     --bg-hero: linear-gradient(135deg, rgba(62, 39, 35, 0.9), rgba(62, 39, 35, 0.7));
-    --bg-section: #ffffff;
+    --bg-section: linear-gradient(135deg, rgba(62, 39, 35, 0.9), rgba(62, 39, 35, 0.7));
     --bg-card: #FAF8F2;
     --bg-card-inner: #fff;
     --bg-footer: #2C2416;
