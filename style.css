@@ -12,7 +12,7 @@
     
     /* Semantic Theme Variables (Default: Light Mode) */
     --bg-body: var(--coffee-cream);
-    --bg-header: #ffffff;
+    --bg-header: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
     --bg-hero: linear-gradient(135deg, rgba(62, 39, 35, 0.9), rgba(62, 39, 35, 0.7));
     --bg-section: linear-gradient(135deg, rgba(62, 39, 35, 0.9), rgba(62, 39, 35, 0.7));
     --bg-card: #FAF8F2;
@@ -157,7 +157,7 @@ header {
     z-index: 1000;
     padding: 15px 0;
     transition: all 0.4s ease;
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    box-shadow:  0 20px rgba(0, 0, 0, 0.1);
 }
 
 .header-container {
